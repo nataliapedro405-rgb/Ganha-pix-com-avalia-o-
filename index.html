@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PIX Avaliações</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#ffe6f2;
+}
+header{
+    background:#ff4fa3;
+    color:#fff;
+    text-align:center;
+    padding:15px;
+    font-size:24px;
+    font-weight:bold;
+}
+.container{
+    padding:20px;
+}
+.card{
+    background:#fff;
+    padding:15px;
+    border-radius:12px;
+    margin-bottom:15px;
+    box-shadow:0 2px 8px rgba(0,0,0,.2);
+}
+button{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    background:#ff4fa3;
+    color:#fff;
+    font-size:18px;
+}
+.saldo{
+    font-size:26px;
+    color:#ff4fa3;
+    text-align:center;
+}
+</style>
+</head>
+
+<body>
+
+<header>💖 PIX Avaliações</header>
+
+<div class="container">
+
+<div class="card">
+<h3>Saldo</h3>
+<p class="saldo">R$ <span id="saldo">0.00</span></p>
+</div>
+
+<div class="card">
+<h3>Avaliação</h3>
+<p>Avalie este aplicativo com 5 estrelas.</p>
+<button onclick="ganhar()">⭐ Avaliar</button>
+</div>
+
+<div class="card">
+<button onclick="alert('Simulação: saque via PIX disponível apenas para demonstração.')">
+💸 Sacar via PIX
+</button>
+</div>
+
+</div>
+
+<script>
+let saldo = 0;
+
+function ganhar(){
+    saldo += 2.50;
+    document.getElementById("saldo").innerHTML = saldo.toFixed(2);
+    alert("Você ganhou R$ 2,50 na simulação!");
+}
+</script>
+
+</body>
+</html>
